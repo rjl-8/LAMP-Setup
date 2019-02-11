@@ -3,7 +3,7 @@ USE plog;
 
 CREATE TABLE items (
   item_id int unsigned not null auto_increment,
-  description varchar(20) not null,
+  description varchar(8000) not null,
   datestamp datetime null,
   sort_idx int null,
   last_mod_date datetime not null default now(),
