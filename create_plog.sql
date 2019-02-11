@@ -1,8 +1,9 @@
 CREATE DATABASE plog;
 USE plog;
-CREATE TABLE item (
+
+CREATE TABLE items (
   item_id int unsigned not null auto_increment,
-  desc varchar(20) not null,
+  description varchar(20) not null,
   datestamp datetime null,
   sort_idx int null,
   last_mod_date datetime not null default now(),
@@ -11,7 +12,7 @@ CREATE TABLE item (
   constraint pk_example primary key (item_id)
 );
 
-CREATE TABLE join (
+CREATE TABLE joins (
   join_id int unsigned not null auto_increment,
   item_id int not null,
   parent_id int not null,
